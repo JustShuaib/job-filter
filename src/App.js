@@ -1,7 +1,13 @@
-import "./App.scss";
+import React from "react";
+import JobList from "./jobList/JobList";
 
-function App() {
-  return <div className="app">Hello from App</div>;
-}
+const App = () => {
+  return (
+    <div>
+      App
+      <JobList />
+    </div>
+  );
+};
 
 export default App;
