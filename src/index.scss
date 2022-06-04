@@ -3,12 +3,18 @@
   src: url(./assets/spartan/Spartan-Medium.ttf);
 }
 $dark-desaturated-cyan: hsl(180, 29%, 50%);
-$light-bg: hsl(180, 52%, 96%);
+$light-bg: hsla(180, 45%, 88%, 0.76);
 $tablets: hsl(180, 31%, 95%);
 $dark-grayish-cyan: hsl(180, 8%, 52%);
 $very-dark-grayish-cyan: hsl(180, 14%, 20%);
-body {
-  background-color: gray;
+$btn-padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   font-family: Spartan;
   font-size: 15px;
+}
+body {
+  background-color: $light-bg;
 }

@@ -1,4 +1,112 @@
 @use "../index" as global;
 .job {
-  background-color: global.$light-bg;
+  position: relative;
+  width: 90%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  padding: 1.5rem;
+  padding-top: 2.5rem;
+  background-color: global.$tablets;
+  box-shadow: 0px 0px 15px global.$dark-grayish-cyan;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0.5rem;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    background-color: global.$dark-desaturated-cyan;
+  }
+  @media screen and(min-width:729px) {
+    & {
+      flex-direction: row;
+      align-items: center;
+      padding-top: 1.5rem;
+    }
+  }
+}
+.logo {
+  position: absolute;
+  top: -1.5rem;
+  left: 2rem;
+  width: 3.5rem;
+  @media screen and(min-width:729px) {
+    & {
+      position: relative;
+      top: 0;
+      left: 0;
+      margin-right: 1.5rem;
+      width: 4rem;
+    }
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  p {
+    color: global.$dark-desaturated-cyan;
+    font: bold;
+    margin-right: 0.5rem;
+  }
+  span {
+    text-transform: uppercase;
+    border-radius: 20px;
+    padding: global.$btn-padding;
+    color: white;
+    font-size: 12px;
+  }
+  .new {
+    background-color: global.$dark-desaturated-cyan;
+  }
+  .featured {
+    background-color: global.$very-dark-grayish-cyan;
+  }
+}
+h2 {
+  font-size: 1.1rem;
+  margin-block: 0.7rem;
+}
+.detail {
+  display: flex;
+  column-gap: 1.5rem;
+  color: global.$dark-grayish-cyan;
+  margin-block: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid global.$dark-grayish-cyan;
+  li:first-of-type {
+    list-style-type: none;
+  }
+  @media screen and(min-width:729px) {
+    & {
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+.btn-list {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  @media screen and(min-width:729px) {
+    & {
+      margin-left: auto;
+    }
+  }
+  button {
+    border: none;
+    color: global.$dark-desaturated-cyan;
+    background: global.$light-bg;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: global.$btn-padding;
+    cursor: pointer;
+  }
 }
