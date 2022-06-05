@@ -1,6 +1,6 @@
 import React from "react";
 import "./filter.scss";
-import deleteBtn from "../../assets/images/icon-remove.svg";
+// import deleteBtn from "../../../public/assets/images/icon-remove.svg";
 const Filter = () => {
   return (
     <div className="filter">
@@ -8,19 +8,19 @@ const Filter = () => {
         <li>
           <span>Frontend</span>
           <button aria-label="delete item">
-            <img src={deleteBtn} alt="" />
+            <img src="" alt="" />
           </button>
         </li>
         <li>
           <span>CSS </span>
           <button aria-label="delete item">
-            <img src={deleteBtn} alt="" />
+            <img src="" alt="" />
           </button>
         </li>
         <li>
           <span>JavaScript </span>
           <button aria-label="delete item">
-            <img src={deleteBtn} alt="" />
+            <img src="" alt="" />
           </button>
         </li>
       </ul>

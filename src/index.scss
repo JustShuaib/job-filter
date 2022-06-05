@@ -1,6 +1,6 @@
 @font-face {
   font-family: Spartan;
-  src: url(./assets/spartan/Spartan-Medium.ttf);
+  src: url(../public/assets/spartan/Spartan-Medium.ttf);
 }
 $dark-desaturated-cyan: hsl(180, 29%, 50%);
 $light-bg: hsla(180, 45%, 88%, 0.76);
@@ -8,7 +8,7 @@ $tablets: hsl(180, 31%, 95%);
 $dark-grayish-cyan: hsl(180, 8%, 52%);
 $very-dark-grayish-cyan: hsl(180, 14%, 20%);
 $btn-padding: 0.5rem 0.5rem 0.3rem 0.5rem;
-$pry-shadow: 0px 0px 15px $dark-grayish-cyan;
+$pry-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 * {
   padding: 0;
   margin: 0;
@@ -17,13 +17,14 @@ $pry-shadow: 0px 0px 15px $dark-grayish-cyan;
   font-size: 15px;
 }
 body {
-  background: $dark-desaturated-cyan url(./assets/images/bg-header-mobile.svg);
+  background: $dark-desaturated-cyan
+    url(../public/assets/images/bg-header-mobile.svg);
   background-position: top;
   background-repeat: no-repeat;
   @media screen and(min-width:729px) {
     & {
       background: $dark-desaturated-cyan
-        url(./assets/images/bg-header-desktop.svg);
+        url(../public/assets/images/bg-header-desktop.svg);
       background-position: top;
       background-repeat: no-repeat;
       background-color: $light-bg;
