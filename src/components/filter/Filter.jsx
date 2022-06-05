@@ -1,30 +1,25 @@
 import React from "react";
 import "./filter.scss";
-// import deleteBtn from "../../../public/assets/images/icon-remove.svg";
-const Filter = () => {
+const Filter = ({ jobList, editList }) => {
+  const handleDelete = (e) => {
+    const value = e.target.previousSibling.textContent;
+    editList((prev) => prev.filter((text) => text !== value));
+  };
   return (
     <div className="filter">
       <ul>
-        <li>
-          <span>Frontend</span>
-          <button aria-label="delete item">
-            <img src="" alt="" />
-          </button>
-        </li>
-        <li>
-          <span>CSS </span>
-          <button aria-label="delete item">
-            <img src="" alt="" />
-          </button>
-        </li>
-        <li>
-          <span>JavaScript </span>
-          <button aria-label="delete item">
-            <img src="" alt="" />
-          </button>
-        </li>
+        {jobList.map((selected) => (
+          <li key={selected}>
+            <span>{selected}</span>
+            <button aria-label="delete item" onClick={handleDelete}>
+              <img src="" alt="" />
+            </button>
+          </li>
+        ))}
       </ul>
-      <button className="clear-btn">Clear</button>
+      <button className="clear-btn" onClick={() => editList([])}>
+        Clear
+      </button>
     </div>
   );
 };
