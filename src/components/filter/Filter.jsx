@@ -1,18 +1,24 @@
 import React from "react";
 import "./filter.scss";
+import deleteIcon from "./icon-remove.svg";
 const Filter = ({ jobList, editList }) => {
   const handleDelete = (e) => {
-    const value = e.target.previousSibling.textContent;
+    let value;
+    if (e.target.tagName === "IMG") {
+      value = e.target.parentElement.previousSibling.textContent;
+    } else {
+      value = e.target.previousSibling.textContent;
+    }
     editList((prev) => prev.filter((text) => text !== value));
   };
   return (
     <div className="filter">
       <ul>
-        {jobList.map((selected) => (
-          <li key={selected}>
-            <span>{selected}</span>
+        {jobList.map((job) => (
+          <li key={job}>
+            <span>{job}</span>
             <button aria-label="delete item" onClick={handleDelete}>
-              <img src="" alt="" />
+              <img src={deleteIcon} alt="delete" />
             </button>
           </li>
         ))}
