@@ -1,0 +1,14 @@
+@use "./index" as global;
+/* .App {
+  background: global.$dark-desaturated-cyan
+    url(./assets/images/bg-header-mobile.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  @media screen and(min-width:729px) {
+    & {
+      background: global.$dark-desaturated-cyan
+        url(./assets/images/bg-header-desktop.svg);
+    }
+  }
+}
+ */

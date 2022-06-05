@@ -1,10 +1,12 @@
 import React from "react";
-import JobList from "./jobList/JobList";
+import "./App.scss";
+import Filter from "./components/filter/Filter";
+import JobList from "./components/jobList/JobList";
 
 const App = () => {
   return (
-    <div>
-      App
+    <div className="App">
+      <Filter />
       <JobList />
     </div>
   );

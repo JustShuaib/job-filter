@@ -1,0 +1,55 @@
+@use "../../index" as global;
+.filter {
+  background-color: global.$tablets;
+  width: 90%;
+  max-width: 1100px;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  border-radius: 5px;
+  @media screen and(min-width:729px) {
+    & {
+      padding: 1.5rem 2rem;
+    }
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    li {
+      align-items: center;
+      justify-content: space-between;
+      background-color: global.$light-bg;
+      border-radius: 5px;
+    }
+    span {
+      color: global.$dark-desaturated-cyan;
+      font-weight: bold;
+      padding-inline: 0.6rem;
+    }
+    button {
+      padding: 0.7rem 0.7rem 0.5rem 0.7rem;
+      background-color: global.$dark-desaturated-cyan;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: global.$very-dark-grayish-cyan;
+      }
+    }
+  }
+}
+.clear-btn {
+  color: global.$dark-grayish-cyan;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  &:hover {
+    text-decoration: underline;
+    color: global.$dark-desaturated-cyan;
+  }
+}
