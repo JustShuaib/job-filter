@@ -1,7 +1,7 @@
 import React from "react";
 import "./filter.scss";
 import deleteIcon from "./icon-remove.svg";
-const Filter = ({ jobList, editList }) => {
+const Filter = ({ jobList, editList, setJobList, data }) => {
   const handleDelete = (e) => {
     let value;
     if (e.target.tagName === "IMG") {
@@ -10,6 +10,11 @@ const Filter = ({ jobList, editList }) => {
       value = e.target.previousSibling.textContent;
     }
     editList((prev) => prev.filter((text) => text !== value));
+  };
+  const handleClear = () => {
+    setJobList(data);
+    editList([]);
+    console.log("You clicked clear");
   };
   return (
     <div className="filter">
@@ -23,7 +28,7 @@ const Filter = ({ jobList, editList }) => {
           </li>
         ))}
       </ul>
-      <button className="clear-btn" onClick={() => editList([])}>
+      <button className="clear-btn" onClick={handleClear}>
         Clear
       </button>
     </div>
