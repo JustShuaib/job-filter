@@ -23,9 +23,10 @@ const App = () => {
               item.tools.includes(filter)
           )
         );
+
   return (
     <main>
-      <div className="bg"></div>
+      <div className="top"></div>
       {filteredJobs.length > 0 && (
         <Filter jobList={filteredJobs} editList={setFilteredJobs} />
       )}
