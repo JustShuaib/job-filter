@@ -9,9 +9,9 @@ const App = () => {
     fetch("/data.json")
       .then((dat) => dat.json())
       .then((res) => setData(res))
-      .catch((err) => setData([err]));
+      .catch((err) => setData(err));
   }, []);
-  const oldList =
+  const filteredList =
     filteredJobs.length === 0
       ? data
       : data.filter((item) =>
@@ -24,11 +24,12 @@ const App = () => {
           )
         );
   return (
-    <main className="App">
+    <main>
+      <div className="bg"></div>
       {filteredJobs.length > 0 && (
         <Filter jobList={filteredJobs} editList={setFilteredJobs} />
       )}
-      {oldList.map((job) => (
+      {filteredList?.map((job) => (
         <Job key={job.id} job={job} onFilter={setFilteredJobs} />
       ))}
     </main>

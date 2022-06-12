@@ -63,6 +63,11 @@
 h2 {
   font-size: 1.1rem;
   margin-block: 0.7rem;
+  @media screen and(min-width:729px) {
+    &:hover {
+      color: global.$dark-desaturated-cyan;
+    }
+  }
 }
 .detail {
   display: flex;
@@ -99,10 +104,14 @@ h2 {
     border-radius: 5px;
     font-weight: bold;
     padding: global.$btn-padding;
-    cursor: pointer;
-    &:hover {
-      background-color: global.$dark-desaturated-cyan;
-      color: white;
+    @media screen and(min-width:729px) {
+      & {
+        cursor: pointer;
+        &:hover {
+          background-color: global.$dark-desaturated-cyan;
+          color: white;
+        }
+      }
     }
   }
 }
